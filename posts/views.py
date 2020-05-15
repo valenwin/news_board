@@ -25,6 +25,9 @@ class PostViewSet(ModelViewSet):
 
     @action(detail=True)
     def upvote(self, request, pk):
+        """
+        Upvote the post by using post id
+        """
         post = get_object_or_404(Post, id=pk)
         post.upvotes += 1
         post.save()
@@ -34,6 +37,9 @@ class PostViewSet(ModelViewSet):
 
     @action(detail=True)
     def comments(self, request, pk):
+        """
+        Get comments for each post by using post id
+        """
         comments = Comment.objects.filter(post=pk)
         serializer = CommentSerializer(comments, many=True)
         return Response(serializer.data)
@@ -51,6 +57,9 @@ class CommentViewSet(ModelViewSet):
 
     @action(detail=True)
     def post(self, request, pk):
+        """
+        Get post information for each comment by using comment id
+        """
         comment = get_object_or_404(Comment, id=pk)
         post = get_object_or_404(Post, id=comment.post.id)
         serializer = PostSerializer(post)
