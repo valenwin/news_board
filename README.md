@@ -1,5 +1,5 @@
 # News Board
-Python 3, Django and Django REST Framework (for REST API)
+
 ## Overview
 Basic models:<br />
 - `Post`
@@ -7,6 +7,7 @@ Basic models:<br />
 
 Functional Requirements:<br />
 - `/api/` major link
+
 - `CRUD API` to manage news posts:
     - GET `/api/posts/` 
     - GET `/api/posts/<post_id>/` ex: `/api/posts/1/`
@@ -27,4 +28,30 @@ Functional Requirements:<br />
     - `/api/posts/<post_id>/upvote/`
     
 Technical Requirements:<br />
+- Python 3, Django and Django REST Framework (for REST API)
+- Postman collection:
+    https://www.getpostman.com/collections/6a6463d9c2d47b943a32
 - `Flake8` linter
+
+## Deploy project on your local machine
+
+1 - To deploy project on your local machine create new virtual environment and execute this command:
+
+`pip install -r requirements.txt`
+
+2 - Insert your own db configuration settings (see example.env):
+and change file name to .env:
+
+`SECRET_KEY`<br />
+
+`DB_PASSWORD`<br />
+`DB_NAME`<br />
+`DB_USER`<br />
+
+3 - Migrate db models to PostgreSQL:
+
+`python3 manage.py migrate`
+
+4 - Run app:
+
+`python3 manage.py runserver`
