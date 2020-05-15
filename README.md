@@ -6,13 +6,22 @@ Basic models:<br />
 - `Comment`
 
 Functional Requirements:<br />
+- `/api/` major link
 - `CRUD API` to manage news posts:
-    - `/api/posts/` view all posts (GET, POST request method)
-    - `/api/posts/<post_id>/` (PUT, DELETE request methods)
-
+    - GET `/api/posts/` 
+    - GET `/api/posts/<post_id>/` ex: `/api/posts/1/`
+    - GET `/api/posts/<post_id>/comments` ex: `/api/posts/1/comments`
+    - POST `/api/posts/`
+    - PUT `/api/posts/<post_id>/` ex: `/api/posts/1/`
+    - DELETE `/api/posts/<post_id>/` ex: `/api/posts/1/`
+    
 - `CRUD API` to manage comments:
-    - `/api/comments/` view all comments (GET, POST request method)
-    - `/api/comments/<post_id>/` (PUT, DELETE request methods)
+    - GET `/api/comments/` 
+    - GET `/api/comments/<comment_id>/` ex: `/api/comments/1/`
+    - GET `/api/comments/<comment_id>/post` ex: `/api/comments/1/post/`
+    - POST `/api/comments/`
+    - PUT `/api/comments/<comment_id>/` ex: `/api/comments/1/`
+    - DELETE `/api/comments/<comment_id>/` ex: `/api/comments/1/`
     
 -  endpoint to upvote the post:
     - `/api/posts/<post_id>/upvote/`

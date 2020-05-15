@@ -10,6 +10,6 @@ router.register('comments', CommentViewSet)
 
 urlpatterns = [
     path('', BaseTemplateView.as_view()),
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
 
 ]
