@@ -1,0 +1,2 @@
+script:
+  - flake8 news_board
