@@ -5,11 +5,10 @@ from .views import BaseTemplateView
 from .views import PostViewSet, CommentViewSet
 
 router = routers.DefaultRouter()
-router.register('posts', PostViewSet)
-router.register('comments', CommentViewSet)
+router.register("posts", PostViewSet)
+router.register("comments", CommentViewSet)
 
 urlpatterns = [
-    path('', BaseTemplateView.as_view()),
-    path('api/', include(router.urls)),
-
+    path("", BaseTemplateView.as_view()),
+    path("api/", include(router.urls)),
 ]

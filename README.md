@@ -1,11 +1,11 @@
 # News Board
 
 ## Overview
-Basic models:<br />
+###Basic models:<br />
 - `Post`
 - `Comment`
 
-Functional Requirements:<br />
+###Functional Requirements:<br />
 - `/api/` major link
 
 - `CRUD API` to manage news posts:
@@ -27,11 +27,16 @@ Functional Requirements:<br />
 -  endpoint to upvote the post:
     - `/api/posts/<post_id>/upvote/`
     
-Technical Requirements:<br />
+###Technical Requirements:<br />
 - Python 3, Django and Django REST Framework (for REST API)
-- Postman collection:
+- `Postman` collection:
     https://www.getpostman.com/collections/6a6463d9c2d47b943a32
-- `Flake8` linter
+- Docker container settings (Dockerfile, docker-compose.yml)
+- Code formatted with `Black`
+    - black {source_file_or_directory}
+- `Flake8` linter (.travis.yml)
+    - flake8 news_board
+- `Heroku` deployment link:
 
 ## Deploy project on your local machine
 

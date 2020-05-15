@@ -9,7 +9,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = '__all__'
+        fields = "__all__"
 
     def create(self, validated_data):
         post = Post(**validated_data)
@@ -29,7 +29,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = '__all__'
+        fields = "__all__"
 
     def create(self, validated_data):
         comment = Comment(**validated_data)

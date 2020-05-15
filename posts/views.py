@@ -10,7 +10,7 @@ from .serializers import PostSerializer, CommentSerializer
 
 
 class BaseTemplateView(TemplateView):
-    template_name = 'base.html'
+    template_name = "base.html"
 
 
 class PostViewSet(ModelViewSet):
@@ -28,8 +28,9 @@ class PostViewSet(ModelViewSet):
         post = get_object_or_404(Post, id=pk)
         post.upvotes += 1
         post.save()
-        return Response({'response': f'You upvoted {post.id} post.'},
-                        status=status.HTTP_200_OK)
+        return Response(
+            {"response": f"You upvoted {post.id} post."}, status=status.HTTP_200_OK
+        )
 
     @action(detail=True)
     def comments(self, request, pk):

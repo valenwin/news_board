@@ -11,23 +11,21 @@ class Post(models.Model):
     updated = models.DateField(auto_now=True)
 
     class Meta:
-        ordering = ('-created',)
+        ordering = ("-created",)
 
     def __str__(self):
-        return f'id: {self.id}, title: {self.title}, author: {self.author_name}'
+        return f"id: {self.id}, title: {self.title}, author: {self.author_name}"
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Post,
-                             on_delete=models.CASCADE,
-                             related_name='comments')
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")
     author_name = models.CharField(max_length=200)
     content = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ('-created',)
+        ordering = ("-created",)
 
     def __str__(self):
-        return f'{self.author_name} leave comment on {self.post.title}'
+        return f"{self.author_name} leave comment on {self.post.title}"
