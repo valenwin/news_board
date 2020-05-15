@@ -56,7 +56,7 @@ class CommentViewSet(ModelViewSet):
         serializer.save()
 
     @action(detail=True)
-    def post(self, request, pk):
+    def post_details(self, request, pk):
         """
         Get post information for each comment by using comment id
         """

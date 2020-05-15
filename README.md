@@ -19,7 +19,7 @@
 - `CRUD API` to manage comments:
     - GET `/api/comments/` 
     - GET `/api/comments/<comment_id>/` ex: `/api/comments/1/`
-    - GET `/api/comments/<comment_id>/post` ex: `/api/comments/1/post/`
+    - GET `/api/comments/<comment_id>/post` ex: `/api/comments/1/post_details/`
     - POST `/api/comments/`
     - PUT `/api/comments/<comment_id>/` ex: `/api/comments/1/`
     - DELETE `/api/comments/<comment_id>/` ex: `/api/comments/1/`
