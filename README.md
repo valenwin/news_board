@@ -39,7 +39,8 @@
     - black {source_file_or_directory}
 - `Flake8` linter (.travis.yml)
     - flake8 news_board
-- `Heroku` deployment link:
+- `Heroku` deployment link:<br />
+    https://news-board-api.herokuapp.com/
 
 ## Deploy project on your local machine
 
