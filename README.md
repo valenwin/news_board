@@ -26,6 +26,9 @@
     
 -  endpoint to upvote the post:
     - `/api/posts/<post_id>/upvote/`
+
+- reset post upvotes count:
+    - `Celery` periodic task: reset_post_upvotes()
     
 ###Technical Requirements:<br />
 - Python 3, Django and Django REST Framework (for REST API)
@@ -60,3 +63,8 @@ and change file name to .env:
 4 - Run app:
 
 `python3 manage.py runserver`
+
+5 - Run Celery:
+
+`celery -A news_board worker -l info`
+launch RabbitMQ by using `rabbitmq-server` or `brew services run rabbitmq`
