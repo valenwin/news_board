@@ -11,6 +11,8 @@ Functional Requirements:<br />
     - `/api/posts/<post_id>/` (PUT, DELETE request methods)
 
 - `CRUD API` to manage comments:
+    - `/api/comments/` view all comments (GET, POST request method)
+    - `/api/comments/<post_id>/` (PUT, DELETE request methods)
     
 -  endpoint to upvote the post:
     - `/api/posts/<post_id>/upvote/`

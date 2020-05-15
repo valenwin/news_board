@@ -8,13 +8,13 @@ class Post(models.Model):
     link = models.URLField(max_length=1000)
     upvotes = models.PositiveIntegerField(default=0)
     created = models.DateTimeField(auto_now_add=True)
-    update = models.DateField(auto_now=True)
+    updated = models.DateField(auto_now=True)
 
     class Meta:
         ordering = ('-created',)
 
     def __str__(self):
-        return f'{self.author_name}: {self.link}'
+        return f'id: {self.id}, title: {self.title}, author: {self.author_name}'
 
 
 class Comment(models.Model):
