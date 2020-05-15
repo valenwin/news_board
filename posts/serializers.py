@@ -20,7 +20,7 @@ class PostSerializer(serializers.ModelSerializer):
         return instance.created.strftime("%B %d, %Y, %H:%M")
 
     def get_updated(self, instance):
-        return instance.updated.strftime("%B %d, %Y, %H:%M")
+        return instance.updated.strftime("%B %d, %Y")
 
 
 class CommentSerializer(serializers.ModelSerializer):
@@ -40,4 +40,4 @@ class CommentSerializer(serializers.ModelSerializer):
         return instance.created.strftime("%B %d, %Y, %H:%M")
 
     def get_updated(self, instance):
-        return instance.updated.strftime("%B %d, %Y, %H:%M")
+        return instance.updated.strftime("%B %d, %Y")

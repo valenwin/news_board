@@ -1,11 +1,11 @@
 # News Board
 
 ## Overview
-###Basic models:<br />
+### Basic models:<br />
 - `Post`
 - `Comment`
 
-###Functional Requirements:<br />
+### Functional Requirements:<br />
 - `/api/` major link
 
 - `CRUD API` to manage news posts:
@@ -30,10 +30,10 @@
 - reset post upvotes count:
     - `Celery` periodic task: reset_post_upvotes()
     
-###Technical Requirements:<br />
+### Technical Requirements:<br />
 - Python 3, Django and Django REST Framework (for REST API)
 - `Postman` collection:
-    https://www.getpostman.com/collections/6a6463d9c2d47b943a32
+    - import file NewsBoard.postman_collection.json
 - Docker container settings (Dockerfile, docker-compose.yml)
 - Code formatted with `Black`
     - black {source_file_or_directory}
@@ -66,5 +66,5 @@ and change file name to .env:
 
 5 - Run Celery:
 
-`celery -A news_board worker -l info`
+`celery -A news_board worker -l info`<br />
 launch RabbitMQ by using `rabbitmq-server` or `brew services run rabbitmq`
